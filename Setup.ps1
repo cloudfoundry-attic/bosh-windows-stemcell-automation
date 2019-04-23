@@ -12,7 +12,7 @@ function Write-Log
 {
     Param (
         [Parameter(Mandatory = $True, Position = 1)][string]$Message,
-        [string]$LogFile = "C:\provision\log.log"
+        [string]$LogFile = "C:\provisions\log.log"
     )
 
     $LogDir = (split-path $LogFile -parent)

@@ -459,14 +459,14 @@ function Install-WUCerts
 {
     try
     {
-        Get-WUCerts
+        throw "**REMOVE** fake throw when testing install-wucerts"
+        #Get-WUCerts
         Write-Log "Successfully retrieved Windows Update certs"
     }
     catch [Exception]
     {
         Write-Log $_.Exception.Message
-        Write-Log "Failed to execute Get-WUCerts powershell cmdlet"
-        throw $_.Exception
+        Write-Warning "Unable to retrieve root certificates for Windows Update Server"
     }
 }
 

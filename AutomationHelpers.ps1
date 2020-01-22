@@ -459,8 +459,7 @@ function Install-WUCerts
 {
     try
     {
-        throw "**REMOVE** fake throw when testing install-wucerts"
-        #Get-WUCerts
+        Get-WUCerts
         Write-Log "Successfully retrieved Windows Update certs"
     }
     catch [Exception]
